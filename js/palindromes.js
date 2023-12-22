@@ -1,33 +1,30 @@
-
-
-function get_substrings(cad){
-    for (let i = 0; i < cad.length; i++) {
+function get_substrings(string){
+    for (let i = 0; i < string.length; i++) {
         let sub_string = "";
-        for (let j = i; j < cad.length; j++) {
-            sub_string = sub_string + cad[j];
+        for (let j = i; j < string.length; j++) {
+            sub_string = sub_string + string[j];
             if (is_palindrome(sub_string)){
                 save_palindrome(sub_string);
             }
         }
     }
-
 }
 
-function lowercase_cad(cad){
-    let new_cad = cad.toLowerCase();
-    return new_cad;
+function lowercase_string(string){
+    let new_string = string.toLowerCase();
+    return new_string;
 }
 
-function trim_cad(cad){
+function trim_string(string){
     var punctuation = /[\.,¿?¡!;@#$%^&*()\[\] ]/g;
-    var new_cad = cad.replace(punctuation, "");
-    return new_cad;
+    var new_string = string.replace(punctuation, "");
+    return new_string;
 }
 
-function is_palindrome(cad){
+function is_palindrome(string){
     let flag = true;
-    for (let i = 0; i < cad.length; i++) {
-        if (cad[i] == cad[cad.length - i - 1]){
+    for (let i = 0; i < string.length; i++) {
+        if (string[i] == string[string.length - i - 1]){
             flag = true;
         } else{
             flag = false;
@@ -39,8 +36,8 @@ function is_palindrome(cad){
 
 var a = {};
 
-function save_palindrome(cad){
-    a[cad] = "random value";
+function save_palindrome(string){
+    a[string] = "random value";
 }
 
 function show_saved(){
@@ -51,8 +48,8 @@ function show_saved(){
     }
 }
 
-var cad = "noon";
+var string = "noon";
 
-get_substrings(cad);
+get_substrings(string);
 show_saved();
-//console.log(is_palindrome(cad));
+//console.log(is_palindrome(string));
