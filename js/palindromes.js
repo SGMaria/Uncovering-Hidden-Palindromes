@@ -1,11 +1,13 @@
 function get_substrings(string){
+    let orginal_string = string;
     string = clean_string(string);
+    renew_dictionary();
     for (let i = 0; i < string.length; i++) {
         let sub_string = "";
         for (let j = i; j < string.length; j++) {
             sub_string = sub_string + string[j];
             if (is_palindrome(sub_string)){
-                save_palindrome(sub_string);
+                save_palindrome(sub_string, orginal_string);
             }
         }
     }
@@ -43,20 +45,23 @@ function is_palindrome(string){
 
 var a = {};
 
-function save_palindrome(string){
-    a[string] = orginal_string;
+function save_palindrome(sub_string, orginal_string){
+    a[sub_string] = orginal_string;
 }
 
 function show_saved(){
     console.log(a);
     for(var key in a) {
-        //var value = a[key];
         console.log(key);
     }
 }
 
-var orginal_string = "A man, a plan, a canal, Panama!";
+function renew_dictionary(){
+    a = {};
+}
 
-get_substrings(orginal_string);
+get_substrings("A man, a plan, a canal, Panama!");
+show_saved();
+get_substrings("Race a car");
 show_saved();
 //console.log(is_palindrome(string));
