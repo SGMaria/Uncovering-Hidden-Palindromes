@@ -50,7 +50,6 @@ function save_palindrome(sub_string, orginal_string){
 }
 
 function show_saved(){
-    console.log(a);
     for(var key in a) {
         console.log(key);
     }
@@ -59,9 +58,3 @@ function show_saved(){
 function renew_dictionary(){
     a = {};
 }
-
-get_substrings("A man, a plan, a canal, Panama!");
-show_saved();
-get_substrings("Race a car");
-show_saved();
-//console.log(is_palindrome(string));
