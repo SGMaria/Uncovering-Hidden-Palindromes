@@ -1,4 +1,5 @@
 function get_substrings(string){
+    string = clean_string(string);
     for (let i = 0; i < string.length; i++) {
         let sub_string = "";
         for (let j = i; j < string.length; j++) {
@@ -10,13 +11,19 @@ function get_substrings(string){
     }
 }
 
+function clean_string(string){
+    string = lowercase_string(string);
+    string = trim_string(string);
+    return string;
+}
+
 function lowercase_string(string){
     let new_string = string.toLowerCase();
     return new_string;
 }
 
 function trim_string(string){
-    var punctuation = /[\.,¿?¡!;@#$%^&*()\[\] ]/g;
+    var punctuation = /[\.,¿?¡!;@#$%^&*"()\[\] ]/g;
     var new_string = string.replace(punctuation, "");
     return new_string;
 }
@@ -37,7 +44,7 @@ function is_palindrome(string){
 var a = {};
 
 function save_palindrome(string){
-    a[string] = "random value";
+    a[string] = orginal_string;
 }
 
 function show_saved(){
@@ -48,8 +55,8 @@ function show_saved(){
     }
 }
 
-var string = "noon";
+var orginal_string = "A man, a plan, a canal, Panama!";
 
-get_substrings(string);
+get_substrings(orginal_string);
 show_saved();
 //console.log(is_palindrome(string));
