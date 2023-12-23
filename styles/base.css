@@ -1,3 +1,7 @@
+body {
+    
+}
+
 table {
     margin: 20px auto;
     width: 80%;
@@ -16,4 +20,19 @@ tbody {
 
 tbody th {
     overflow: hidden;
+}
+
+#div_for_input {
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+}
+
+#div_for_input input {
+    width: 50%;
+    margin-right: 15px;
+    min-width: 20%;
+}
+
+#div_for_input button {
 }
