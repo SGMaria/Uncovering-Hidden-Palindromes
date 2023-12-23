@@ -2,6 +2,11 @@ body, input, button {
     font-family: 'Roboto', serif;
     font-size: 16px;
     font-weight: 400;
+
+}
+
+h2 {
+    text-align: center;
 }
 
 table {
@@ -28,13 +33,12 @@ tbody th {
     margin: 10px auto;
     display: flex;
     justify-content: center;
-    
 }
 
 #div_for_input input {
     width: 50%;
     margin-right: 15px;
-    min-width: 20%;
+    min-width: 100px;
 }
 
 #div_for_input button {
@@ -42,4 +46,5 @@ tbody th {
     background-color: rgb(209, 238, 248);
     border-radius: 25px;
     border: 1px solid lightblue;
+    min-width: fit-content;
 }
