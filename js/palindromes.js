@@ -43,18 +43,20 @@ function is_palindrome(string){
     return flag;
 }
 
-var a = {};
+var sub_string_dictionary = {};
 
 function save_palindrome(sub_string, orginal_string){
-    a[sub_string] = orginal_string;
+    sub_string_dictionary[sub_string] = orginal_string;
 }
 
 function show_saved(){
-    for(var key in a) {
-        console.log(key);
+    let list = []
+    for(var key in sub_string_dictionary) {
+        list.push(key);
     }
+    return list;
 }
 
 function renew_dictionary(){
-    a = {};
+    sub_string_dictionary = {};
 }
