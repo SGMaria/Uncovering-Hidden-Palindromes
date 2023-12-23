@@ -1,0 +1,9 @@
+#results {
+    margin: 20px auto;
+    width: 80%;
+}
+
+#results thead {
+    background-color: gainsboro;
+    border: 1px solid;
+}
