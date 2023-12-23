@@ -2,13 +2,12 @@ function init(){
     let string = document.getElementById("input_for_string").value;
     get_substrings(string);
     table_list();
+    clear_input();
 }
 
 function table_list(){
     let table = document.getElementById("results");
-    console.log(table);
     table = table.getElementsByTagName("tbody")[0];
-    console.log(table);
     let list = show_saved();
     let row = table.insertRow(0);
     let cell1 = row.insertCell(0);
@@ -20,10 +19,10 @@ function table_list(){
 }
 
 function spaces(string){
-    let new_string = '';
+    let new_string = '[';
     string.forEach(pali => {
-        if (new_string == ''){
-            new_string = '["' + pali;
+        if (new_string == '['){
+            new_string = new_string + pali;
         } else{
             new_string = new_string + ', "' + pali + '"';
         }
@@ -32,4 +31,18 @@ function spaces(string){
     return new_string;
 }
 
+function clear_input(){
+    document.getElementById("input_for_string").value = "";
+}
+
+function enable_button(){
+    let string = document.getElementById("input_for_string").value;
+    if (string == ""){
+        document.getElementById("start").disabled = true;
+    } else {
+        document.getElementById("start").disabled = false;
+    }
+}
+
 document.getElementById("start").addEventListener("click", init);
+document.getElementById("input_for_string").addEventListener("keyup", enable_button);
