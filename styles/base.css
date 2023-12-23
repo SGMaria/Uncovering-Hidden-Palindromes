@@ -1,5 +1,7 @@
-body {
-    
+body, input, button {
+    font-family: 'Roboto', serif;
+    font-size: 16px;
+    font-weight: 400;
 }
 
 table {
@@ -26,6 +28,7 @@ tbody th {
     margin: 10px auto;
     display: flex;
     justify-content: center;
+    
 }
 
 #div_for_input input {
