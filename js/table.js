@@ -16,7 +16,20 @@ function table_list(){
     let cell3 = row.insertCell(2);
     cell1.innerHTML = document.getElementById("input_for_string").value;
     cell2.innerHTML = list.length;
-    cell3.innerHTML = list;
+    cell3.innerHTML = spaces(list);
+}
+
+function spaces(string){
+    let new_string = '';
+    string.forEach(pali => {
+        if (new_string == ''){
+            new_string = '["' + pali;
+        } else{
+            new_string = new_string + ', "' + pali + '"';
+        }
+    });
+    new_string = new_string + "]";
+    return new_string;
 }
 
 document.getElementById("start").addEventListener("click", init);

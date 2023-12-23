@@ -1,9 +1,19 @@
-#results {
+table {
     margin: 20px auto;
     width: 80%;
+    max-width: 85%;
+    height: max-content;
+    text-align: center;
 }
 
-#results thead {
-    background-color: gainsboro;
-    border: 1px solid;
+thead {
+    background-color: rgb(209, 238, 248);
+} 
+
+tbody {
+    background-color: whitesmoke;
+}
+
+tbody th {
+    overflow: hidden;
 }
