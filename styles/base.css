@@ -37,7 +37,6 @@ tbody th {
 }
 
 #div_input{
-    background-color: black;
     width: 70%;
     min-width: 100px;
     margin-right: 15px;
@@ -50,7 +49,6 @@ tbody th {
 }
 
 #div_button {
-    background-color: blue;
     width: 30%;
     display: inherit;
     justify-content: center;
