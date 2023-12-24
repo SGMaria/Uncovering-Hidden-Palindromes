@@ -9,7 +9,6 @@
   - [Take in Count](#take-in-count)
   - [Built with](#built-with)
   - [Useful Resources](#useful-resources)
-- [Author](#author)
 
 ## Overview
 
