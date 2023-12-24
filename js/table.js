@@ -33,6 +33,7 @@ function spaces(string){
 
 function clear_input(){
     document.getElementById("input_for_string").value = "";
+    enable_button();
 }
 
 function enable_button(){
