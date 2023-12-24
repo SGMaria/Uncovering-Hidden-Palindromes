@@ -29,22 +29,58 @@ tbody th {
     overflow: hidden;
 }
 
-#div_for_input {
+#main_div {
     margin: 10px auto;
     display: flex;
     justify-content: center;
+    width: 80%;
 }
 
-#div_for_input input {
-    width: 50%;
-    margin-right: 15px;
+#div_input{
+    background-color: black;
+    width: 70%;
     min-width: 100px;
+    margin-right: 15px;
+    display: inherit;
+    justify-content: center;
 }
 
-#div_for_input button {
+#div_input input {
+    width: 100%;
+}
+
+#div_button {
+    background-color: blue;
+    width: 30%;
+    display: inherit;
+    justify-content: center;
+}
+#div_button button {
     padding: 2px 20px;
     background-color: rgb(209, 238, 248);
     border-radius: 25px;
     border: 1px solid lightblue;
-    min-width: fit-content;
+    width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    
+    #main_div {
+        display: block;
+        margin: auto;
+    }
+
+    #div_button {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 10px 0px;
+    }
+
+    #div_input {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
 }

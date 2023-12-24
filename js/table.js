@@ -44,5 +44,13 @@ function enable_button(){
     }
 }
 
+function keyup_enter(e){
+    if (e.code === 'Enter') {
+        document.getElementById("start").click();
+    }
+}
+
 document.getElementById("start").addEventListener("click", init);
+document.getElementById("input_for_string").addEventListener("keyup", keyup_enter);
 document.getElementById("input_for_string").addEventListener("keyup", enable_button);
+
