@@ -1,8 +1,11 @@
+body{
+    background-color: rgb(221, 221, 226);
+}
+
 body, input, button {
     font-family: 'Roboto', serif;
     font-size: 16px;
     font-weight: 400;
-
 }
 
 h2 {
@@ -22,7 +25,7 @@ thead {
 } 
 
 tbody {
-    background-color: whitesmoke;
+    background-color: rgb(235, 250, 255);
 }
 
 tbody th {
@@ -31,17 +34,18 @@ tbody th {
 
 #main_div {
     margin: 10px auto;
-    display: flex;
-    justify-content: center;
     width: 80%;
+    display: flex;
+}
+
+#main_div div{
+    display: inherit;
+    justify-content: center;
 }
 
 #div_input{
     width: 70%;
-    min-width: 100px;
     margin-right: 15px;
-    display: inherit;
-    justify-content: center;
 }
 
 #div_input input {
@@ -50,9 +54,8 @@ tbody th {
 
 #div_button {
     width: 30%;
-    display: inherit;
-    justify-content: center;
 }
+
 #div_button button {
     padding: 2px 20px;
     background-color: rgb(209, 238, 248);
@@ -68,17 +71,14 @@ tbody th {
         margin: auto;
     }
 
-    #div_button {
+    #main_div div {
         display: flex;
         justify-content: center;
         width: 100%;
-        margin: 10px 0px;
     }
 
-    #div_input {
-        display: flex;
-        justify-content: center;
-        width: 100%;
+    #div_button {        
+        margin-top: 15px;
     }
 
 }
